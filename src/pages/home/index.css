@@ -28,7 +28,6 @@
 
 #home-body {
   width: 100%;
-  height: calc(100vh - 55px);
   display: flex;
   flex-direction: row;
   background-color: #fff;
@@ -152,5 +151,4 @@
 
 #home-right-content {
   width: 25%;
-  background-color: darkcyan;
 }
