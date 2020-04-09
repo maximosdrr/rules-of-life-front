@@ -1,0 +1,74 @@
+#rule-item-text-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: solid rgb(233, 233, 233) 0.5px;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+}
+
+#rule-item-main-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#rule-item-title {
+  display: flex;
+  flex-direction: row;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#rule-item-description {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  height: 80px;
+}
+
+#rule-item-action-area {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  margin-top: 5px;
+}
+
+#rule-item-heart {
+  color: crimson;
+  margin-right: 5px;
+}
+
+#rule-item-arrow-down {
+  color: rgb(69, 69, 148);
+  margin-right: 5px;
+}
+
+#rule-item-action-area button {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  background-color: #f9f9f9;
+  border: solid #dbdbdb 1px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 20px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-left: 5px;
+  outline: none;
+}
+
+#rule-item-action-area button:hover {
+  background: #d5d8dd;
+  border: solid #d5d8dd 1px;
+
+  border-radius: 20px;
+  text-decoration: none;
+}

@@ -1,0 +1,156 @@
+#home-main-content {
+  background-color: #fff;
+}
+
+#navigation-bar {
+  display: flex;
+  flex-direction: row;
+  height: 55px;
+  width: 100%;
+  background-color: #2a83ed;
+}
+
+#navigation-bar-icon {
+  color: #f5f5f5;
+  width: 35px;
+  height: 35px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#navigation-bar-title {
+  font-size: 32px;
+  color: #f5f5f5;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+#home-body {
+  width: 100%;
+  height: calc(100vh - 55px);
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+}
+
+#home-left-content {
+  width: 25%;
+}
+
+#home-user-area {
+  display: flex;
+  flex-direction: row;
+  height: 120px;
+  width: 100%;
+  background-color: #e5e8ed;
+}
+
+#home-user-image {
+  height: 85px;
+  width: 85px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  align-self: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#home-user-name {
+  height: 85px;
+  margin-left: 10px;
+  width: calc(100% - 125px);
+  display: flex;
+  align-self: center;
+  justify-content: left;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#home-indice-title {
+  display: flex;
+  flex-direction: row;
+  font-size: 35px;
+  font-weight: bold;
+  color: #2a83ed;
+  height: 60px;
+  background-color: #ececec;
+  border: 0.2px solid rgb(192, 186, 186);
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#home-indice-icon {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#home-indice-text {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+#home-rule-group {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 60px - 124px);
+}
+
+#home-center-content {
+  width: 50%;
+  background-color: #f1f1f1;
+}
+
+#home-publication-area {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#home-publication-area button {
+  align-self: flex-end;
+  width: 120px;
+  height: 40px;
+  margin-right: 30px;
+  margin-top: 20px;
+  background-color: #2a83ed;
+  border-radius: 10px;
+  border: 1px solid #2e80e4;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2161af;
+}
+
+#home-publication-area button:hover {
+  background-color: #2161af;
+}
+
+#home-publication-area button:active {
+  position: relative;
+  top: 1px;
+}
+
+#home-publication-area textarea {
+  padding: 10px 10px 10px 10px;
+  margin: 30px 30px 0px 30px;
+  height: 90px;
+  border-radius: 10px;
+  outline: none;
+  border-color: #e0d8d8;
+  resize: none;
+}
+
+#home-publications {
+  display: flex;
+  flex-direction: column;
+}
+
+#home-right-content {
+  width: 25%;
+  background-color: darkcyan;
+}
