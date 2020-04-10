@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
+import { ValidateUser } from "./hooks/login";
+import { useHistory } from "react-router-dom";
 
 export const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const history = useHistory();
+  const validate = () => ValidateUser(username, password, history);
+
   return (
     <div id="login-content">
       <div id="login-header">
@@ -18,6 +25,7 @@ export const Login = () => {
               type="text"
               className="form-control login-input"
               placeholder="Enter username"
+              onChange={(text) => setUsername(text.target.value)}
               required
             ></input>
           </div>
@@ -26,12 +34,14 @@ export const Login = () => {
               type="password"
               className="form-control login-input"
               placeholder="Password"
+              onChange={(text) => setPassword(text.target.value)}
               required
             ></input>
           </div>
           <button
             type="button"
             className="btn btn-primary btn-block login-button"
+            onClick={validate}
           >
             Login
           </button>
