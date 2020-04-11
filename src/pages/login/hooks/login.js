@@ -10,10 +10,9 @@ export const ValidateUser = async (username, password, history) => {
     .then((result) => {
       const token = result.data.token;
       localStorage.setItem("token", token);
-      console.log(result);
       redirectToHome(result, history);
     })
     .catch((erro) => {
-      redirectToHome(erro, history);
+      alert(erro);
     });
 };
