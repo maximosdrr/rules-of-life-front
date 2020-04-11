@@ -4,7 +4,7 @@ import { RuleItem } from "../components/rule-item/index";
 export const RenderRules = (rules_data) => {
   const rules = [];
   rules_data.map((item, index) => {
-    rules.push(
+    return rules.push(
       <RuleItem
         key={item.id}
         title={item.title}

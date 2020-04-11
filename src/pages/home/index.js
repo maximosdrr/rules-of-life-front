@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen, faJedi } from "@fortawesome/free-solid-svg-icons";
-import { RuleGroup } from "./components/rule-group/index";
-import { RuleItem } from "./components/rule-item/index";
 import { api } from "../../services/api";
 import { RenderRules } from "./functions/renderRule";
+import { RenderRuleGroup } from "./functions/renderRuleGroup";
 
 export class Home extends Component {
   state = {
@@ -27,8 +26,9 @@ export class Home extends Component {
   }
 
   render() {
-    const { rules_data } = this.state;
+    const { rules_data, group_rules_data } = this.state;
     const rules = RenderRules(rules_data);
+    const rulesGroup = RenderRuleGroup(group_rules_data);
 
     return (
       <div id="home-main-content">
@@ -54,12 +54,7 @@ export class Home extends Component {
               ></FontAwesomeIcon>
               <p id="home-indice-text">Indice</p>
             </div>
-            <div id="home-rule-group">
-              <RuleGroup title="Grupo de regra 1"></RuleGroup>
-              <RuleGroup title="Grupo de regra 2"></RuleGroup>
-              <RuleGroup title="Grupo de regra 3"></RuleGroup>
-              <RuleGroup title="Grupo de regra 4"></RuleGroup>
-            </div>
+            <div id="home-rule-group">{rulesGroup}</div>
           </div>
           <div id="home-center-content">
             <div id="home-publication-area">
