@@ -176,14 +176,14 @@
   width: 50%;
 }
 
-#modal-title {
+#publication-modal-title {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-#modal-title p {
+#publication-modal-title p {
   width: 90%;
   font-size: 24px;
   font-weight: 600;
@@ -191,14 +191,14 @@
   padding: 0px 0px 0px 0px;
 }
 
-#modal-title span {
+#publication-modal-title span {
   display: flex;
   width: 10%;
   justify-content: flex-end;
   margin-right: 5px;
 }
 
-#modal-body {
+#publication-modal-body {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
@@ -206,7 +206,7 @@
   justify-content: center;
 }
 
-#modal-body input {
+#publication-modal-body input {
   width: 100%;
   height: 40px;
   padding-left: 10px;
@@ -216,7 +216,7 @@
   font-size: 14px;
 }
 
-#modal-body-select-group {
+#publication-modal-body-select-group {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -224,26 +224,26 @@
   margin-top: 10px;
 }
 
-#modal-body-select-group select {
+#publication-modal-body-select-group select {
   width: 50%;
   height: 35px;
   padding-left: 5px;
   border-radius: 5px;
 }
 
-#modal-body-select-group select:required:invalid {
+#publication-modal-body-select-group select:required:invalid {
   color: gray;
 }
 
-#modal-body-select-group-privacite {
+#publication-modal-body-select-group-privacite {
   margin-right: 5px;
 }
 
-#modal-body-select-group-rules-group {
+#publication-modal-body-select-group-rules-group {
   margin-left: 5px;
 }
 
-#modal-actions {
+#publication-modal-actions {
   margin-top: 25px;
   width: 100%;
   display: flex;
@@ -251,7 +251,7 @@
   justify-content: flex-end;
 }
 
-#modal-actions button {
+#publication-modal-actions button {
   width: 140px;
   height: 35px;
   border-radius: 10px;
@@ -264,22 +264,22 @@
   color: #f3f3f3;
 }
 
-#modal-action-cancel {
+#publication-modal-action-cancel {
   margin-right: 5px;
   background-color: rgba(219, 8, 8, 0.774);
 }
 
-#modal-action-publish {
+#publication-modal-action-publish {
   margin-left: 5px;
   background-color: #2a83ed;
 }
 
-#modal-action-cancel:hover {
+#publication-modal-action-cancel:hover {
   transition: 0.5s;
   background-color: rgba(104, 0, 0, 0.774);
 }
 
-#modal-action-publish:hover {
+#publication-modal-action-publish:hover {
   transition: 0.5s;
   background-color: #1c58a0;
 }

@@ -6,7 +6,7 @@ import { faBookOpen, faJedi } from "@fortawesome/free-solid-svg-icons";
 import { api } from "../../services/api";
 import { RenderRules } from "./functions/renderRule";
 import { RenderRuleGroup, RenderRuleOption } from "./functions/renderRuleGroup";
-import { OpenPublicationModal } from "./functions/openPublicationModal";
+import { OpenPublicationModal } from "./functions/modalFunctions";
 
 export class Home extends Component {
   state = {
@@ -67,26 +67,41 @@ export class Home extends Component {
           </div>
           <div id="home-right-content"></div>
         </div>
-        {/* MODAL */}
+
+        {/*MODAL REGRA*/}
+        <div id="rule-modal" className="modal">
+          <div className="modal-content">
+            <p>REGRA</p>
+          </div>
+        </div>
+        {/*MODAL REGRA*/}
+
+        {/* MODAL PUBLICAÇÃO */}
         <div id="publication-modal" className="modal">
           <div className="modal-content">
-            <div id="modal-title">
+            <div id="publication-modal-title">
               <p>Finalizando Publicação</p>
-              <span class="close" id="modal-close-button">
+              <span class="close" id="publication-modal-close-button">
                 &times;
               </span>
             </div>
-            <div id="modal-body">
+            <div id="publication-modal-body">
               <input placeholder="Escolha um titulo" required></input>
-              <div id="modal-body-select-group">
-                <select id="modal-body-select-group-privacite" required>
+              <div id="publication-modal-body-select-group">
+                <select
+                  id="publication-modal-body-select-group-privacite"
+                  required
+                >
                   <option value="" disabled selected hidden>
                     Privacidade
                   </option>
                   <option>Publica</option>
                   <option>Privada</option>
                 </select>
-                <select id="modal-body-select-group-rules-group" required>
+                <select
+                  id="publication-modal-body-select-group-rules-group"
+                  required
+                >
                   <option value="" disabled selected hidden>
                     Escolha um Grupo
                   </option>
@@ -94,13 +109,13 @@ export class Home extends Component {
                 </select>
               </div>
             </div>
-            <div id="modal-actions">
-              <button id="modal-action-cancel">Cancelar</button>
-              <button id="modal-action-publish">Publicar</button>
+            <div id="publication-modal-actions">
+              <button id="publication-modal-action-cancel">Cancelar</button>
+              <button id="publication-modal-action-publish">Publicar</button>
             </div>
           </div>
         </div>
-        {/* MODAL */}
+        {/* PUBLICAÇÃO MODAL */}
       </div>
     );
   }
