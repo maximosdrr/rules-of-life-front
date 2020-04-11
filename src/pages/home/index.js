@@ -5,17 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen, faJedi } from "@fortawesome/free-solid-svg-icons";
 import { api } from "../../services/api";
 import { RenderRules } from "./functions/renderRule";
-import {
-  RenderRuleGroup,
-  RenderRuldeOption,
-} from "./functions/renderRuleGroup";
+import { RenderRuleGroup, RenderRuleOption } from "./functions/renderRuleGroup";
 import { OpenPublicationModal } from "./functions/openPublicationModal";
 
 export class Home extends Component {
   state = {
     loading: true,
-    rules_data: [],
-    group_rules_data: [],
+    rules: [],
+    rulesGroup: [],
+    rulesOptions: [],
   };
   async componentDidMount() {
     const [resultRuleGroup, resultRules] = await Promise.all([
@@ -24,8 +22,9 @@ export class Home extends Component {
     ]);
 
     this.setState({
-      rules_data: resultRules.data,
-      group_rules_data: resultRuleGroup.data,
+      rules: RenderRules(resultRules.data),
+      rulesGroup: RenderRuleGroup(resultRuleGroup.data),
+      rulesOptions: RenderRuleOption(resultRuleGroup.data),
       loading: false,
     });
 
@@ -33,10 +32,6 @@ export class Home extends Component {
   }
 
   render() {
-    const { rules_data, group_rules_data } = this.state;
-    const rules = RenderRules(rules_data);
-    const rulesGroup = RenderRuleGroup(group_rules_data);
-    const rulesOptions = RenderRuldeOption(group_rules_data);
     return (
       <div id="home-main-content">
         <div id="navigation-bar">
@@ -61,19 +56,19 @@ export class Home extends Component {
               ></FontAwesomeIcon>
               <p id="home-indice-text">Indice</p>
             </div>
-            <div id="home-rule-group">{rulesGroup}</div>
+            <div id="home-rule-group">{this.state.rulesGroup}</div>
           </div>
           <div id="home-center-content">
             <div id="home-publication-area">
               <textarea placeholder="Escreva uma regra"></textarea>
-              <button id="open_modal">Publicar</button>
+              <button id="open-publication-modal">Publicar</button>
             </div>
-            <div id="home-publications">{rules}</div>
+            <div id="home-publications">{this.state.rules}</div>
           </div>
           <div id="home-right-content"></div>
         </div>
         {/* MODAL */}
-        <div id="publication_modal" className="modal">
+        <div id="publication-modal" className="modal">
           <div className="modal-content">
             <div id="modal-title">
               <p>Finalizando Publicação</p>
@@ -95,7 +90,7 @@ export class Home extends Component {
                   <option value="" disabled selected hidden>
                     Escolha um Grupo
                   </option>
-                  {rulesOptions}
+                  {this.state.rulesOptions}
                 </select>
               </div>
             </div>

@@ -18,7 +18,7 @@ export const RenderRuleGroup = (group_rules_data) => {
   return groupRules;
 };
 
-export const RenderRuldeOption = (group_rules_data) => {
+export const RenderRuleOption = (group_rules_data) => {
   const groupRulesOptions = [];
   group_rules_data.map((item, index) => {
     return groupRulesOptions.push(<option id={item.id}>{item.title}</option>);

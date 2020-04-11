@@ -1,6 +1,6 @@
 export const OpenPublicationModal = () => {
-  var modal = document.getElementById("publication_modal");
-  var btn = document.getElementById("open_modal");
+  var modal = document.getElementById("publication-modal");
+  var btn = document.getElementById("open-publication-modal");
   var cancel = document.getElementById("modal-action-cancel");
   var closeButton = document.getElementById("modal-close-button");
   btn.onclick = function () {
