@@ -11,6 +11,7 @@
   background-color: #d8d6d6;
   cursor: pointer;
   border-radius: 10px;
+  transition-duration: 0.5s;
 }
 
 #rule-item-main-content {
@@ -74,6 +75,7 @@
 #rule-item-action-area button:hover {
   background: #d5d8dd;
   border: solid #d5d8dd 1px;
+  transition-duration: 0.5s;
 
   border-radius: 20px;
   text-decoration: none;
