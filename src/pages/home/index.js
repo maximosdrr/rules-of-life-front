@@ -6,7 +6,10 @@ import { faBookOpen, faJedi } from "@fortawesome/free-solid-svg-icons";
 import { api } from "../../services/api";
 import { RenderRules } from "./functions/renderRule";
 import { RenderRuleGroup, RenderRuleOption } from "./functions/renderRuleGroup";
-import { OpenPublicationModal } from "./functions/modalFunctions";
+import {
+  OpenPublicationModal,
+  OpenRuleModal,
+} from "./functions/modalFunctions";
 
 export class Home extends Component {
   state = {
@@ -29,6 +32,7 @@ export class Home extends Component {
     });
 
     OpenPublicationModal();
+    OpenRuleModal();
   }
 
   render() {
@@ -71,6 +75,9 @@ export class Home extends Component {
         {/*MODAL REGRA*/}
         <div id="rule-modal" className="modal">
           <div className="modal-content">
+            <span id="rule-modal-close-button" className="close">
+              &times
+            </span>
             <p>REGRA</p>
           </div>
         </div>
@@ -81,7 +88,7 @@ export class Home extends Component {
           <div className="modal-content">
             <div id="publication-modal-title">
               <p>Finalizando Publicação</p>
-              <span class="close" id="publication-modal-close-button">
+              <span className="close" id="publication-modal-close-button">
                 &times;
               </span>
             </div>
