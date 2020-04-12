@@ -6,6 +6,7 @@ export const RenderRules = (rules_data) => {
   rules_data.map((item, index) => {
     return rules.push(
       <RuleItem
+        id={item.id}
         key={item.id}
         title={item.title}
         index={index + 1}

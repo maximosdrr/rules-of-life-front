@@ -78,7 +78,7 @@ export class Home extends Component {
             <span id="rule-modal-close-button" className="close">
               &times
             </span>
-            <p>REGRA</p>
+            <p id="rule-modal-main-text">REGRA</p>
           </div>
         </div>
         {/*MODAL REGRA*/}
