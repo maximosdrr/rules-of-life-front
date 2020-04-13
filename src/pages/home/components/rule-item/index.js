@@ -6,7 +6,7 @@ import { faHeart, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 export const RuleItem = (props) => {
   return (
     <div id="rule-item-main-content">
-      <div id="rule-item-text-content">
+      <div id="rule-item-text-content" onClick={props.openDetails}>
         <div id="rule-item-title">
           <p>{`${props.index} - ${props.title}`}</p>
         </div>

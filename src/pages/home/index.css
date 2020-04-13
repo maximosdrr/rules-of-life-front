@@ -168,7 +168,7 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
+.publication-modal-content {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
@@ -282,4 +282,97 @@
 #publication-modal-action-publish:hover {
   transition: 0.5s;
   background-color: #1c58a0;
+}
+
+/* MODAL DAS REGRAS */
+
+.rule-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+#rule-modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+#rule-modal-title p {
+  font-size: 24px;
+}
+
+#rule-modal-title input {
+  width: 70%;
+  height: 40px;
+  padding-left: 10px;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+}
+
+#rule-modal-title span {
+  font-size: 24px;
+}
+
+#rule-modal-body-content {
+  font-size: 18px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#rule-modal-body textarea {
+  width: 70%;
+  margin-top: 15px;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  height: 90px;
+  border-radius: 10px;
+  outline: none;
+  border-color: #e0d8d8;
+  resize: none;
+}
+
+#rule-modal-action-area {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#rule-modal-action-area button {
+  width: 140px;
+  height: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: Arial;
+  border: 1px solid #fefefe;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 3px;
+  color: #f3f3f3;
+}
+
+#rule-modal-action-area-button-delete {
+  background-color: rgb(163, 38, 38);
+}
+#rule-modal-action-area-button-delete:hover {
+  background-color: rgb(122, 29, 29);
+  transition: 0.5s;
+}
+
+#rule-modal-action-area-button-edit {
+  background-color: #2a83ed;
+}
+
+#rule-modal-action-area-button-edit:hover {
+  background-color: #1c58a0;
+  transition: 0.5s;
 }

@@ -1,11 +1,13 @@
 import React from "react";
 import { RuleItem } from "../components/rule-item/index";
 
-export const RenderRules = (rules_data) => {
+export const RenderRules = (rules_data, openDetails) => {
   const rules = [];
   rules_data.map((item, index) => {
+    const openRuleModal = () => openDetails(item);
     return rules.push(
       <RuleItem
+        openDetails={openRuleModal}
         key={item.id}
         title={item.title}
         index={index + 1}
