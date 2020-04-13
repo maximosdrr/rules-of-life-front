@@ -48,7 +48,6 @@ export class Home extends Component {
     });
 
     OpenPublicationModal();
-    OpenRuleModal();
   }
 
   render() {

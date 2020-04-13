@@ -4,9 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export const RuleItem = (props) => {
+  const openDetails = () => props.openDetails(props);
   return (
     <div id="rule-item-main-content">
-      <div id="rule-item-text-content" onClick={props.openDetails}>
+      <div id="rule-item-text-content" onClick={openDetails}>
         <div id="rule-item-title">
           <p>{`${props.index} - ${props.title}`}</p>
         </div>

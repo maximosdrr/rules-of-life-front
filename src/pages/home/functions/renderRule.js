@@ -7,6 +7,7 @@ export const RenderRules = (rules_data, openDetails) => {
     const openRuleModal = () => openDetails(item);
     return rules.push(
       <RuleItem
+        id={item.id}
         openDetails={openRuleModal}
         key={item.id}
         title={item.title}
