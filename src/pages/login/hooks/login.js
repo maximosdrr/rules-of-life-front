@@ -13,6 +13,7 @@ export const ValidateUser = async (username, password, history) => {
       redirectToHome(result, history);
     })
     .catch((erro) => {
+      console.log(erro);
       alert(erro);
     });
 };

@@ -38,7 +38,6 @@ export class Home extends Component {
         rules_route: newRoute,
         rules: RenderRules(resultRules.data, OpenRuleModal),
       });
-      console.log(newRoute);
     };
     this.setState({
       rules: RenderRules(resultRules.data, OpenRuleModal),
