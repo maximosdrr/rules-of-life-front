@@ -14,5 +14,5 @@ export const CreateNewUser = async (name, username, password, email, age) => {
     .then((result) => {
       alert("Registrado com Sucesso, Faça o login :)");
     })
-    .catch((erro) => alert(erro.message));
+    .catch((erro) => alert(erro));
 };

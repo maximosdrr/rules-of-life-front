@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookOpen, faJedi } from "@fortawesome/free-solid-svg-icons";
+import { faBookOpen, faJedi, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { api } from "../../services/api";
 import { RenderRules } from "./functions/renderRule";
 import { RenderRuleGroup, RenderRuleOption } from "./functions/renderRuleGroup";
@@ -70,11 +70,19 @@ export class Home extends Component {
               </div>
             </div>
             <div id="home-indice-title">
-              <FontAwesomeIcon
-                id="home-indice-icon"
-                icon={faJedi}
-              ></FontAwesomeIcon>
-              <p id="home-indice-text">Indice</p>
+              <div id="home-indice-title-left">
+                <FontAwesomeIcon
+                  id="home-indice-icon"
+                  icon={faJedi}
+                ></FontAwesomeIcon>
+                <p id="home-indice-text">Indice</p>
+              </div>
+              <div id="home-indice-title-right">
+                <FontAwesomeIcon
+                  id="home-indice-title-right-icon"
+                  icon={faPlus}
+                ></FontAwesomeIcon>
+              </div>
             </div>
             <div id="home-rule-group">{this.state.rulesGroup}</div>
           </div>

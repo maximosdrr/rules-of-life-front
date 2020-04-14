@@ -3,10 +3,8 @@ import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import { CreateNewUser } from "./hooks/createNewUser";
-import { useHistory } from "react-router-dom";
 
 export const Register = () => {
-  const history = useHistory();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

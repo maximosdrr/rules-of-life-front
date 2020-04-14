@@ -70,6 +70,8 @@
 #home-indice-title {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   font-size: 35px;
   font-weight: bold;
   color: #2a83ed;
@@ -78,6 +80,24 @@
   border: 0.2px solid rgb(192, 186, 186);
   margin-top: 2px;
   margin-bottom: 2px;
+}
+
+#home-indice-title-left {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+#home-indice-title-right {
+  display: flex;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+#home-indice-title-right :hover {
+  color: #16457e;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 #home-indice-icon {
